@@ -72,6 +72,8 @@
 //        key-positions = <12 13>;
 //        layers = < BASE >;
 //      };
+  };
+};
 
 / {
   keymap {
