@@ -158,8 +158,8 @@
         // |      \        |        -      |      [        |       ]        | Lock Layer  |   |    Left   |      Down      |      Up     |     Right     |        '        |
             &hml LSHIFT BSLH &hml LALT MINUS &hml LGUI LBKT &hml LCTRL RBKT    &tog NUM         &kp LEFT   &hmr RCTRL DOWN &hmr RGUI UP   &hmr RALT RIGHT  &kp APOS
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
-        // |    shift      |        `      |  SBright down |  SBright up    |    BASE     |   |   Repeat  |      =         |             |               |        /        |
-              &kp LSHIFT      &kp GRAVE      &kp C_BRI_DOWN   &kp C_BRI_UP     &to BASE        &key_repeat    &kp EQUAL          ___            ___        &mt RSHIFT FSLH
+        // |    shift      |        `      |  F15/Bright-  |   F14/Bright+  |    BASE     |   |   Repeat  |      =         |             |               |        /        |
+              &kp LSHIFT      &kp GRAVE        &kp F15          &kp F14        &to BASE        &key_repeat    &kp EQUAL          ___            ___        &mt RSHIFT FSLH
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
                                                 &kp TAB           ___            ___               ___           ___             ___
         //                                 |---------------|----------------|-------------|   |-----------|----------------|-------------|
