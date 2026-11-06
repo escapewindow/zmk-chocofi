@@ -158,8 +158,8 @@
         // |      \        |        -      |      [        |       ]        | Lock Layer  |   |    Left   |      Down      |      Up     |     Right     |        '        |
             &hml LSHIFT BSLH &hml LALT MINUS &hml LGUI LBKT &hml LCTRL RBKT    &tog NUM         &kp LEFT   &hmr RCTRL DOWN &hmr RGUI UP   &hmr RALT RIGHT  &kp APOS
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
-        // |    shift      |        `      |  F15/Bright-  |   F14/Bright+  |    BASE     |   |   Repeat  |      =         |             |               |        /        |
-              &kp LSHIFT      &kp GRAVE        &kp F15          &kp F14        &to BASE        &key_repeat    &kp EQUAL          ___            ___        &mt RSHIFT FSLH
+        // |    shift      |        `      |   Spotlight   |   Toggle dock  |    BASE     |   |   Repeat  |      =         |             |               |        /        |
+              &kp LSHIFT      &kp GRAVE      &kp LG(SPACE)   &kp LG(LA(D))     &to BASE        &key_repeat    &kp EQUAL          ___            ___        &mt RSHIFT FSLH
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
                                                 &kp TAB           ___            ___               ___           ___             ___
         //                                 |---------------|----------------|-------------|   |-----------|----------------|-------------|
@@ -175,8 +175,8 @@
         // |     End       |      PgUp     |     PgDn       |     Home       | Lock Layer  |   | Mouse Left   |  Mouse Down   |  Mouse Up  |  Mouse Right  |      F11        |
             &hml LSHIFT END &hml LALT PG_DN &hml LGUI PG_UP  &hml LCTRL HOME    &tog FN         &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP &mmv MOVE_RIGHT    &kp F11
         // |---------------|---------------|----------------|----------------|-------------|   |--------------|---------------|------------|---------------|-----------------|
-        // |   caps word   |    Vol-;Prev  |   Mute;Play    |   Vol+;FF      |    BASE     |   |  Spotlight   |  Toggle dock  |            |               |      F12        |
-              &caps_word          &td0           &td1             &td2          &to BASE        &kp LG(SPACE)   &kp LG(LA(D))       _x_          _x_             &kp F12
+        // |   caps word   |    Vol-;Prev  |   Mute;Play    |   Vol+;FF      |    BASE     |   |  F14/Bright- |  F15/Bright+  |            |               |      F12        |
+              &caps_word          &td0           &td1             &td2          &to BASE            &kp F14       &kp F15          _x_           _x_            &kp F12
         // |---------------|---------------|----------------|----------------|-------------|   |--------------|---------------|------------|---------------|-----------------|
                                                   ___              ___            ___                 ___         &mkp RCLK     &mkp LCLK
         //                                 |----------------|----------------|-------------|   |--------------|---------------|------------|
