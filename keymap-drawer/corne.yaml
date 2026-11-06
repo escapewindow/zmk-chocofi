@@ -60,8 +60,8 @@ layers:
   - ''''
   - $$mdi:apple-keyboard-shift$$
   - '`'
-  - F11
-  - F12
+  - F15
+  - F14
   - {t: base, h: '$$mdi:toggle-switch$$'}
   - '&key_repeat'
   - '='
@@ -94,17 +94,17 @@ layers:
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
-  - X
+  - F11
   - '&caps_word'
   - '&td0'
   - '&td1'
   - '&td2'
   - {t: base, h: '$$mdi:toggle-switch$$'}
-  - '&msc SCRL_LEFT'
-  - $$mdi:mouse-move-down$$
-  - $$mdi:mouse-move-up$$
-  - '&msc SCRL_RIGHT'
+  - Gui+$$mdi:keyboard-space$$
+  - Gui+Alt+D
   - ''
+  - ''
+  - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
