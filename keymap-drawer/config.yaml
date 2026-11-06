@@ -293,6 +293,8 @@ parse_config:
     LCTRL: $$mdi:apple-keyboard-control$$
     LEFT_CONTROL: $$mdi:apple-keyboard-control$$
     LC(A): 'tmux prefix'
+    LG(SPACE): 'spotlight'
+    LG(LA(D)): 'dock'
   raw_binding_map:
     '&forward':  $$mdi:arrow-right-box$$
     '&backward': $$mdi:arrow-left-box$$
