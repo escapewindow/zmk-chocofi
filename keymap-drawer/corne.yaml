@@ -60,8 +60,8 @@ layers:
   - ''''
   - $$mdi:apple-keyboard-shift$$
   - '`'
-  - F15
-  - F14
+  - Gui+$$mdi:keyboard-space$$
+  - Gui+Alt+D
   - {t: base, h: '$$mdi:toggle-switch$$'}
   - '&key_repeat'
   - '='
@@ -100,8 +100,8 @@ layers:
   - '&td1'
   - '&td2'
   - {t: base, h: '$$mdi:toggle-switch$$'}
-  - Gui+$$mdi:keyboard-space$$
-  - Gui+Alt+D
+  - F14
+  - F15
   - ''
   - ''
   - F12
