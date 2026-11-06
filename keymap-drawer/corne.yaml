@@ -63,7 +63,7 @@ layers:
   - spotlight
   - dock
   - {t: base, h: '$$mdi:toggle-switch$$'}
-  - '&key_repeat'
+  - Repeat
   - '='
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -95,10 +95,10 @@ layers:
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
   - F11
-  - '&caps_word'
-  - '&td0'
-  - '&td1'
-  - '&td2'
+  - Caps Word
+  - {t: '<<', h: Vol-}
+  - {t: Play/Pause, h: Mute}
+  - {t: '>>', h: Vol+}
   - {t: base, h: '$$mdi:toggle-switch$$'}
   - F14
   - F15
