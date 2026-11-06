@@ -702,6 +702,17 @@ parse_config:
       shifted: $$mdi:gradient-horizontal$$
       hold:    "(25,0,100)"
       type:    sym_by_sym
+    '&caps_word': 'Caps Word'
+    '&key_repeat': 'Repeat'
+    '&td0':
+      tap:  '<<'
+      hold: 'Vol-'
+    '&td1':
+      tap:  'Play/Pause'
+      hold: 'Mute'
+    '&td2':
+      tap:  '>>'
+      hold: 'Vol+'
 
   zmk_combos:
     combo_lighting:               { align: top    , o: 2.12  , arc_scale: 1.03  }
