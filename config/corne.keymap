@@ -18,17 +18,6 @@
 #define FN 2
 #define BOARD 3
 
-// redefined keycodes
-#define _LWIN_    &kp LEFT_WIN
-#define _RALT_    &kp RIGHT_ALT
-#define _RET_     &kp RETURN
-#define _CUT_     &kp LG(X)
-#define _COPY_    &kp LG(C)
-#define _PASTE_   &kp LG(V)
-
-#define _MO_NUM_ &mo NUMBER
-
-#define OUTTOG   &out OUT_TOG // toggle keyboard output bluetooth/usb
 #define ___      &trans      //  transparent
 #define _x_      &none
 
@@ -40,48 +29,32 @@
 //     mods = <(MOD_LSFT)>;
 // )
 
-/* left-hand HRMs */
-ZMK_BEHAVIOR(hml, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    require-prior-idle-ms = <PRIOR_IDLE_MS>;
-    bindings = <&kp>, <&kp>;
-    hold-trigger-on-release;
-)
-
-/* right-hand HRMs */
-ZMK_BEHAVIOR(hmr, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    require-prior-idle-ms = <PRIOR_IDLE_MS>;
-    bindings = <&kp>, <&kp>;
-    hold-trigger-on-release;
-)
-
-/* left-hand HRM shift */
-ZMK_BEHAVIOR(hml_s, hold_tap,
-    flavor = "hold-preferred";
-    tapping-term-ms = <125>;
-    //quick-tap-ms = <125>;                // repeat on tap-into-hold
-//    require-prior-idle-ms = <100>;         // requires PR #1387
-    bindings = <&kp>, <&kp>;
-    //hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
-    // hold-trigger-on-release;             // delay positional check until key-release
-)
-
-/* right-hand HRM shift */
-ZMK_BEHAVIOR(hmr_s, hold_tap,
-    flavor = "hold-preferred";
-    tapping-term-ms = <125>;
-    //quick-tap-ms = <125>;                // repeat on tap-into-hold
-//    require-prior-idle-ms = <100>;         // requires PR #1387
-    bindings = <&kp>, <&kp>;
-    //hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
-    // hold-trigger-on-release;             // delay positional check until key-release
-)
-
+/ {
+    behaviors {
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <PRIOR_IDLE_MS>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <PRIOR_IDLE_MS>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
+        };
+    };
+};
 
 / {
   chosen {
