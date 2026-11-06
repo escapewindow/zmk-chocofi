@@ -21,8 +21,6 @@
 #define ___      &trans      //  transparent
 #define _x_      &none
 
-#define MEH LC(LS(LALT))
-
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 // ZMK_MOD_MORPH(smart_shift,
 //     bindings = <&sk LSHFT>, <&caps_word>;
@@ -55,6 +53,31 @@
 };
 
 / {
+    macros {
+        spotlight: spotlight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+        dock: dock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCMD>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCMD>
+                ;
+        };
+    };
+};
+
+/ {
   chosen {
     zmk,matrix_transform = &five_column_transform;
   };
@@ -74,59 +97,6 @@
 //        key-positions = <12 13>;
 //        layers = < BASE >;
 //      };
-
-  };
-  behaviors {
-    hm: homerow_mods {
-      compatible = "zmk,behavior-hold-tap";
-      flavor = "balanced";
-      tapping-term-ms = <280>;
-      quick-tap-ms = <QUICK_TAP_MS>;
-      bindings = <&kp>, <&kp>;
-      // label = "HOMEROW_MODS";
-      #binding-cells = <2>;
-      // hold-trigger-key-positions = <TRIGGER_POS>;
-      hold-trigger-on-release;
-
-    };
-    SBD: S_BSPC_DEL {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp BSPC>, <&kp DEL>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    oneshot_esc: oneshot {
-      compatible = "zmk,behavior-oneshot";
-      label = "OneShot ESC";
-      #binding-cells = <0>;
-    };
-    td0: tap_dance_0 {
-       compatible = "zmk,behavior-tap-dance";
-       #binding-cells = <0>;
-       tapping-term-ms = <200>;
-       bindings = <&kp C_VOL_DN>, <&kp C_PREV>;
-    };
-    td1: tap_dance_1 {
-       compatible = "zmk,behavior-tap-dance";
-       #binding-cells = <0>;
-       tapping-term-ms = <200>;
-       bindings = <&kp C_MUTE>, <&kp C_PP>;
-    };
-    td2: tap_dance_2 {
-       compatible = "zmk,behavior-tap-dance";
-       #binding-cells = <0>;
-       tapping-term-ms = <200>;
-       bindings = <&kp C_VOL_UP>, <&kp C_NEXT>;
-    };
-  };
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
-      if-layers = <1 2>;
-      then-layer = <3>;
-    };
-  };
-};
 
 / {
   keymap {
@@ -159,7 +129,7 @@
             &hml LSHIFT BSLH &hml LALT MINUS &hml LGUI LBKT &hml LCTRL RBKT    &tog NUM         &kp LEFT   &hmr RCTRL DOWN &hmr RGUI UP   &hmr RALT RIGHT  &kp APOS
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
         // |    shift      |        `      |   Spotlight   |   Toggle dock  |    BASE     |   |   Repeat  |      =         |             |               |        /        |
-              &kp LSHIFT      &kp GRAVE      &kp LG(SPACE)   &kp LG(LA(D))     &to BASE        &key_repeat    &kp EQUAL          ___            ___        &mt RSHIFT FSLH
+              &kp LSHIFT      &kp GRAVE       &spotlight         &dock         &to BASE        &key_repeat    &kp EQUAL          ___            ___        &mt RSHIFT FSLH
         // |---------------|---------------|---------------|----------------|-------------|   |-----------|----------------|-------------|---------------|-----------------|
                                                 &kp TAB           ___            ___               ___           ___             ___
         //                                 |---------------|----------------|-------------|   |-----------|----------------|-------------|
