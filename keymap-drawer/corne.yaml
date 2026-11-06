@@ -1,6 +1,5 @@
 layout: {zmk_keyboard: corne, layout_name: five_column_transform}
 layers:
-<<<<<<< HEAD
   base:
   - Q
   - W
@@ -13,16 +12,16 @@ layers:
   - O
   - P
   - A
-  - {t: S, h: LALT}
-  - {t: D, h: LGUI}
-  - {t: F, h: LCTRL}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - G
   - H
-  - {t: J, h: RCTRL}
-  - {t: K, h: RGUI}
-  - {t: L, h: RALT}
+  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - ;
-  - {t: Z, h: LSHIFT}
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - X
   - C
   - V
@@ -31,13 +30,13 @@ layers:
   - M
   - ','
   - .
-  - {t: /, h: RSHIFT}
-  - RETURN
-  - ESC
-  - {t: TAB, h: fn}
+  - {t: /, h: '$$mdi:apple-keyboard-shift$$'}
+  - ⮐
+  - Esc
+  - {t: '$$mdi:keyboard-tab$$', h: fn}
   - number
   - BSPC
-  - SPACE
+  - $$mdi:keyboard-space$$
   number:
   - '1'
   - '2'
@@ -49,124 +48,15 @@ layers:
   - '8'
   - '9'
   - '0'
-  - {t: \, h: LSHIFT}
-  - {t: '-', h: LALT}
-  - {t: '[', h: LGUI}
-  - {t: ']', h: LCTRL}
-  - {t: number, h: toggle}
-  - LEFT
-  - {t: DOWN, h: RCTRL}
-  - {t: UP, h: RGUI}
-  - {t: RIGHT, h: RALT}
-  - ''''
-  - LSHIFT
-  - '`'
-  - F11
-  - F12
-  - {t: base, h: toggle}
-  - '&key_repeat'
-  - '='
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: /, h: RSHIFT}
-  - TAB
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  fn:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - {t: END, h: LSHIFT}
-  - {t: PG DN, h: LALT}
-  - {t: PG UP, h: LGUI}
-  - {t: HOME, h: LCTRL}
-  - {t: fn, h: toggle}
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_UP'
-  - '&mmv MOVE_RIGHT'
-  - X
-  - '&caps_word'
-  - '&td0'
-  - '&td1'
-  - '&td2'
-  - {t: base, h: toggle}
-  - '&msc SCRL_LEFT'
-  - '&msc SCRL_DOWN'
-  - '&msc SCRL_UP'
-  - '&msc SCRL_RIGHT'
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - '&mkp RCLK'
-  - '&mkp LCLK'
-  board:
-  - '&bootloader'
-  - ''
-  - ''
-  - ''
-  - BT CLR ALL
-  - BT CLR
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - OUT USB
-  - OUT BLE
-  - ''
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - '&studio_unlock'
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: BT DISC, h: '0'}
-  - {t: BT DISC, h: '1'}
-  - {t: BT DISC, h: '2'}
-  - {t: BT DISC, h: '3'}
-  - {t: BT DISC, h: '4'}
-||||||| parent of 53aa7c9 (copy in keymap-drawer)
-=======
-  base: [Q, W, E, R, T, Y, U, I, O, P, A, '&hml LALT S', '&hml LGUI D', '&hml LCTRL F', G, H, '&hmr RCTRL J', '&hmr RGUI K', '&hmr RALT L', ;, '&hml LSHIFT Z', X,
-    C, V, B, N, M, ',', ., '&hmr RSHIFT FSLH', ⮐, Esc, fn, number, BSPC, '$$mdi:keyboard-space$$']
-  number:
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - '&hml LSHIFT BSLH'
-  - '&hml LALT MINUS'
-  - '&hml LGUI LBKT'
-  - '&hml LCTRL RBKT'
+  - {t: \, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '-', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '[', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: ']', h: '$$mdi:apple-keyboard-control$$'}
   - {t: number, h: '$$mdi:toggle-switch$$'}
   - $$mdi:arrow-left$$
-  - '&hmr RCTRL DOWN'
-  - '&hmr RGUI UP'
-  - '&hmr RALT RIGHT'
+  - {t: '$$mdi:arrow-down$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:arrow-up$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:arrow-right$$', h: '$$mdi:apple-keyboard-option$$'}
   - ''''
   - $$mdi:apple-keyboard-shift$$
   - '`'
@@ -195,16 +85,16 @@ layers:
   - F8
   - F9
   - F10
-  - '&hml LSHIFT END'
-  - '&hml LALT PG_DN'
-  - '&hml LGUI PG_UP'
-  - '&hml LCTRL HOME'
+  - {t: End, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: PG DN, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: PG UP, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: Home, h: '$$mdi:apple-keyboard-control$$'}
   - {t: fn, h: '$$mdi:toggle-switch$$'}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
-  - ''
+  - X
   - '&caps_word'
   - '&td0'
   - '&td1'
@@ -252,7 +142,6 @@ layers:
   - {t: '$$mdi:bluetooth-off$$', s: '2', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-off$$', s: '3', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-off$$', s: '4', type: sym_sub_text}
->>>>>>> 53aa7c9 (copy in keymap-drawer)
   - ''
   - {t: ▽, type: trans}
   - {type: held}
