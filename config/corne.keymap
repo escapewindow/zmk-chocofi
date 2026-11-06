@@ -5,7 +5,6 @@
 
 #include <behaviors.dtsi>
 
-#include "zmk-helpers/helper.h"
 #include "keys/36.h"
 
 // global
