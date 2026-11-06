@@ -175,8 +175,8 @@
         // |     End       |      PgUp     |     PgDn       |     Home       | Lock Layer  |   | Mouse Left   |  Mouse Down   |  Mouse Up  |  Mouse Right  |      F11        |
             &hml LSHIFT END &hml LALT PG_DN &hml LGUI PG_UP  &hml LCTRL HOME    &tog FN         &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_UP &mmv MOVE_RIGHT    &kp F11
         // |---------------|---------------|----------------|----------------|-------------|   |--------------|---------------|------------|---------------|-----------------|
-        // |   caps word   |    Vol-;Prev  |   Mute;Play    |   Vol+;FF      |    BASE     |   |              |               |            |               |      F12        |
-              &caps_word          &td0           &td1             &td2          &to BASE         &msc SCRL_LEFT &msc SCRL_DOWN  &msc SCRL_UP &msc SCRL_RIGHT   &kp F12
+        // |   caps word   |    Vol-;Prev  |   Mute;Play    |   Vol+;FF      |    BASE     |   |  Spotlight   |  Toggle dock  |            |               |      F12        |
+              &caps_word          &td0           &td1             &td2          &to BASE        &kp LG(SPACE)   &kp LG(LA(D))       _x_          _x_             &kp F12
         // |---------------|---------------|----------------|----------------|-------------|   |--------------|---------------|------------|---------------|-----------------|
                                                   ___              ___            ___                 ___         &mkp RCLK     &mkp LCLK
         //                                 |----------------|----------------|-------------|   |--------------|---------------|------------|
