@@ -32,8 +32,8 @@ layers:
   - .
   - {t: /, h: '$$mdi:apple-keyboard-shift$$'}
   - ⮐
-  - {t: Esc, h: number}
-  - {t: '$$mdi:keyboard-tab$$', h: fn}
+  - {t: '$$mdi:keyboard-tab$$', h: number}
+  - {t: Esc, h: fn}
   - number
   - BSPC
   - $$mdi:keyboard-space$$
@@ -68,7 +68,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: /, h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:keyboard-tab$$
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
