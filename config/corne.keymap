@@ -21,8 +21,6 @@
 #define ___      &trans      //  transparent
 #define _x_      &none
 
-#define MEH LC(LS(LALT))
-
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 // ZMK_MOD_MORPH(smart_shift,
 //     bindings = <&sk LSHFT>, <&caps_word>;
@@ -77,29 +75,6 @@
 
   };
   behaviors {
-    hm: homerow_mods {
-      compatible = "zmk,behavior-hold-tap";
-      flavor = "balanced";
-      tapping-term-ms = <280>;
-      quick-tap-ms = <QUICK_TAP_MS>;
-      bindings = <&kp>, <&kp>;
-      // label = "HOMEROW_MODS";
-      #binding-cells = <2>;
-      // hold-trigger-key-positions = <TRIGGER_POS>;
-      hold-trigger-on-release;
-
-    };
-    SBD: S_BSPC_DEL {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp BSPC>, <&kp DEL>;
-      mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    oneshot_esc: oneshot {
-      compatible = "zmk,behavior-oneshot";
-      label = "OneShot ESC";
-      #binding-cells = <0>;
-    };
     td0: tap_dance_0 {
        compatible = "zmk,behavior-tap-dance";
        #binding-cells = <0>;
@@ -117,6 +92,12 @@
        #binding-cells = <0>;
        tapping-term-ms = <200>;
        bindings = <&kp C_VOL_UP>, <&kp C_NEXT>;
+    };
+    shift_z: shift_z {
+       compatible = "zmk,behavior-tap-dance";
+       #binding-cells = <0>;
+       tapping-term-ms = <200>;
+       bindings = <&kp LSHIFT>, <&kp Z>;
     };
   };
   conditional_layers {
@@ -142,9 +123,9 @@
                 &kp A         &hml LALT S   &hml LGUI D  &hml LCTRL F    &kp G             &kp H      &hmr RCTRL J   &hmr RGUI K    &hmr RALT L         &kp SEMI
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
-             &hml LSHIFT Z      &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr RSHIFT FSLH
+               &shift_z         &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
-                                             &kp RETURN     &kp ESC       &lt FN TAB         &mo NUM     &kp BSPC       &kp SPACE
+                                             &kp RETURN    &lt NUM ESC   &lt FN TAB         &mo NUM     &kp BSPC       &kp SPACE
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
       >;
     };

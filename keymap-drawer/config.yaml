@@ -713,6 +713,9 @@ parse_config:
     '&td2':
       tap:  '>>'
       hold: 'Vol+'
+    '&shift_z':
+      tap:  'Z'
+      hold: 'Shift'
 
   zmk_combos:
     combo_lighting:               { align: top    , o: 2.12  , arc_scale: 1.03  }
