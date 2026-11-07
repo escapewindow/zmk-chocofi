@@ -21,7 +21,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-command$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - ;
-  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: Z, h: Shift}
   - X
   - C
   - V
@@ -32,7 +32,7 @@ layers:
   - .
   - {t: /, h: '$$mdi:apple-keyboard-shift$$'}
   - ⮐
-  - Esc
+  - {t: Esc, h: number}
   - {t: '$$mdi:keyboard-tab$$', h: fn}
   - number
   - BSPC
@@ -69,9 +69,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: /, h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:keyboard-tab$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   fn:
@@ -143,8 +143,8 @@ layers:
   - {t: '$$mdi:bluetooth-off$$', s: '3', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-off$$', s: '4', type: sym_sub_text}
   - ''
+  - {type: held}
+  - {type: held}
   - {t: ▽, type: trans}
-  - {type: held}
-  - {type: held}
   - ''
   - ''
