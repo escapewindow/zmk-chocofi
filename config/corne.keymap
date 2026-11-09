@@ -125,7 +125,7 @@
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
                &shift_z         &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
-                                             &kp RETURN    &lt NUM TAB   &lt FN ESC         &mo NUM     &kp BSPC       &kp SPACE
+                                            &lt NUM TAB    &kp RETURN    &lt FN ESC         &mo NUM     &kp SPACE       &kp BSPC
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
       >;
     };
