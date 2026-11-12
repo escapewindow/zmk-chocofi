@@ -123,7 +123,7 @@
                 &kp A         &hml LALT S   &hml LGUI D  &hml LCTRL F    &kp G             &kp H      &hmr RCTRL J   &hmr RGUI K    &hmr RALT L         &kp SEMI
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
         // |     Z         |      X       |     C       |      V       |     B       |   |     N     |      M       |     ,       |     .        |         /        |
-               &shift_z         &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &hmr RSHIFT FSLH
+               &shift_z         &kp X         &kp C          &kp V         &kp B             &kp N        &kp M         &kp COMMA     &kp DOT      &lt RSHIFT FSLH
         // |---------------|--------------|-------------|--------------|-------------|   |-----------|--------------|-------------|--------------|------------------|
                                              &kp RETURN    &lt NUM TAB   &lt FN ESC         &mo NUM     &kp BSPC       &kp SPACE
         //                                |-------------|--------------|-------------|   |-----------|--------------|-------------|
